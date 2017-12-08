@@ -16,7 +16,7 @@ public class GameManager : MonoBehaviour
 
     void SpawnTarget()
     {
-        GameObject targetModel = Resources.Load("Target") as GameObject;
+        GameObject targetModel = Resources.Load("Model1") as GameObject;
         currentTarget = Instantiate(targetModel, new Vector3(20, 0, 20), Quaternion.identity);
     }
 	

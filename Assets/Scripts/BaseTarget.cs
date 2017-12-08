@@ -5,18 +5,19 @@ using UnityEngine;
 public class BaseTarget : MonoBehaviour
 {
     // Basics
-    string[] targetTraits;
-    public bool revealed = false;
+    public string[] targetTraits;
+    bool[] revealedTraits;
 
 	// Use this for initialization
 	void Start ()
     {
-		
-	}
+        PopulateTraits();
+    }
 
     void PopulateTraits()
     {
-        targetTraits = new string[4];
+        targetTraits = new string[6];
+        revealedTraits = new bool[6];
 
         int randomTrait = 0;
         for (int i = 0; i < targetTraits.Length; i++)
@@ -26,15 +27,15 @@ public class BaseTarget : MonoBehaviour
             switch(randomTrait)
             {
                 case 0:
-                    targetTraits[i] = "Drunk"; break;
+                    targetTraits[i] = "Cat"; break;
                 case 1:
-                    targetTraits[i] = "Drunk"; break;
+                    targetTraits[i] = "Belter"; break;
                 case 2:
-                    targetTraits[i] = "Drunk"; break;
+                    targetTraits[i] = "Smoker"; break;
                 case 3:
-                    targetTraits[i] = "Drunk"; break;
+                    targetTraits[i] = "Eyepatcher"; break;
                 case 4:
-                    targetTraits[i] = "Drunk"; break;
+                    targetTraits[i] = "Scar"; break;
                 case 5:
                     targetTraits[i] = "Drunk"; break;
                 case 6:
