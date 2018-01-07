@@ -1,0 +1,238 @@
+fileFormatVersion: 2
+guid: cb6dcf40d41bddd4590b8a9e4a302480
+timeCreated: 1515332361
+licenseType: Free
+ModelImporter:
+  serializedVersion: 22
+  fileIDToRecycleName:
+    100000: attaching_system
+    100002: big_weel_l
+    100004: big_weel_r
+    100006: case
+    100008: case.001
+    100010: case.002
+    100012: cog
+    100014: cog1
+    100016: cog10
+    100018: cog2
+    100020: cog3
+    100022: cog4
+    100024: cog5
+    100026: cog6
+    100028: cog7
+    100030: cog8
+    100032: cog9
+    100034: engine
+    100036: exhaust
+    100038: frame
+    100040: platform
+    100042: seat
+    100044: small_weel_l
+    100046: small_weel_r
+    100048: steer
+    100050: //RootNode
+    100052: tubes
+    100054: weel_cover_l
+    100056: weel_cover_r
+    400000: attaching_system
+    400002: big_weel_l
+    400004: big_weel_r
+    400006: case
+    400008: case.001
+    400010: case.002
+    400012: cog
+    400014: cog1
+    400016: cog10
+    400018: cog2
+    400020: cog3
+    400022: cog4
+    400024: cog5
+    400026: cog6
+    400028: cog7
+    400030: cog8
+    400032: cog9
+    400034: engine
+    400036: exhaust
+    400038: frame
+    400040: platform
+    400042: seat
+    400044: small_weel_l
+    400046: small_weel_r
+    400048: steer
+    400050: //RootNode
+    400052: tubes
+    400054: weel_cover_l
+    400056: weel_cover_r
+    2100000: Material.001
+    2100002: Material.004
+    2100004: Material.002
+    2100006: No Name
+    2100008: Material.006
+    2100010: Material.005
+    2100012: Material
+    2100014: Material.003
+    2100016: Material.008
+    2300000: attaching_system
+    2300002: big_weel_l
+    2300004: big_weel_r
+    2300006: case
+    2300008: case.001
+    2300010: case.002
+    2300012: cog
+    2300014: cog1
+    2300016: cog10
+    2300018: cog2
+    2300020: cog3
+    2300022: cog4
+    2300024: cog5
+    2300026: cog6
+    2300028: cog7
+    2300030: cog8
+    2300032: cog9
+    2300034: engine
+    2300036: exhaust
+    2300038: frame
+    2300040: platform
+    2300042: seat
+    2300044: small_weel_l
+    2300046: small_weel_r
+    2300048: steer
+    2300050: tubes
+    2300052: weel_cover_l
+    2300054: weel_cover_r
+    3300000: attaching_system
+    3300002: big_weel_l
+    3300004: big_weel_r
+    3300006: case
+    3300008: case.001
+    3300010: case.002
+    3300012: cog
+    3300014: cog1
+    3300016: cog10
+    3300018: cog2
+    3300020: cog3
+    3300022: cog4
+    3300024: cog5
+    3300026: cog6
+    3300028: cog7
+    3300030: cog8
+    3300032: cog9
+    3300034: engine
+    3300036: exhaust
+    3300038: frame
+    3300040: platform
+    3300042: seat
+    3300044: small_weel_l
+    3300046: small_weel_r
+    3300048: steer
+    3300050: tubes
+    3300052: weel_cover_l
+    3300054: weel_cover_r
+    4300000: case.002
+    4300002: case.001
+    4300004: attaching_system
+    4300006: platform
+    4300008: cog3
+    4300010: cog7
+    4300012: cog4
+    4300014: cog8
+    4300016: cog5
+    4300018: cog6
+    4300020: cog2
+    4300022: weel_cover_r
+    4300024: small_weel_l
+    4300026: steer
+    4300028: exhaust
+    4300030: case
+    4300032: cog1
+    4300034: tubes
+    4300036: engine
+    4300038: frame
+    4300040: weel_cover_l
+    4300042: small_weel_r
+    4300044: big_weel_r
+    4300046: big_weel_l
+    4300048: seat
+    4300050: cog
+    4300052: cog10
+    4300054: cog9
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
