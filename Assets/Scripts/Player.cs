@@ -46,8 +46,8 @@ public class Player : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.E) && !amTalking)
             {
-                transform.parent.GetComponent<UnityStandardAssets.Characters.FirstPerson.FirstPersonController>().m_MouseLook.SetCursorLock(false);
-                transform.parent.GetComponent<UnityStandardAssets.Characters.FirstPerson.FirstPersonController>().enabled = false;
+                //transform.parent.GetComponent<UnityStandardAssets.Characters.FirstPerson.FirstPersonController>().m_MouseLook.SetCursorLock(false);
+                //transform.parent.GetComponent<UnityStandardAssets.Characters.FirstPerson.FirstPersonController>().enabled = false;
                 panelDialogue.SetActive(true);
                 amTalking = true;
             }
@@ -102,8 +102,8 @@ public class Player : MonoBehaviour
     public void DoneTalking()
     {
         
-        transform.parent.GetComponent<UnityStandardAssets.Characters.FirstPerson.FirstPersonController>().enabled = true;
-        transform.parent.GetComponent<UnityStandardAssets.Characters.FirstPerson.FirstPersonController>().m_MouseLook.SetCursorLock(true);
+        //transform.parent.GetComponent<UnityStandardAssets.Characters.FirstPerson.FirstPersonController>().enabled = true;
+        //transform.parent.GetComponent<UnityStandardAssets.Characters.FirstPerson.FirstPersonController>().m_MouseLook.SetCursorLock(true);
         panelDialogue.SetActive(false);
         amTalking = false;
     }
