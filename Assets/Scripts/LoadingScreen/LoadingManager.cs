@@ -7,54 +7,28 @@ using UnityEngine.UI;
 public class LoadingManager : MonoBehaviour
 {
     public Image imageLoading;
-    public Text textLoading;
 
-    private bool loadScene = false;
-
-    private IEnumerator coroutine;
+    //public Image exampleImage;
+    public Text exampleTitle;
+    public Text exampleDescription;
 
 	// Use this for initialization
 	void Start ()
     {
-        UpdateLoadingText();
+        LoadExampleText();
         StartCoroutine(LoadNewScene());
+    }
+
+    void LoadExampleText()
+    {
+        exampleTitle.text = "Operation TopGun";
+        exampleDescription.text = "<b>Steps:</b>\n- Find the backpack\n- Get into the solitary\n- Free a chicken\n- Catch the chicken\n- Put it in the back pack\n- Wait for the night\n- Get on top of the water tower\n- Equip the chicken glider\n- Jump and glide to freedom\n\n<b>Core items:</b>\n- Backpack\n- Chicken\n- keys\n";
     }
 	
 	// Update is called once per frame
 	void Update ()
     {
         imageLoading.color = Color.Lerp(Color.white, Color.clear, Mathf.PingPong(Time.time, 1));
-    }
-
-    void UpdateLoadingText()
-    {
-        if (coroutine != null)
-        {
-            StopCoroutine(coroutine);
-        }
-
-        switch (textLoading.text)
-        {
-            case "Loading":
-                textLoading.text = "Loading."; break;
-            case "Loading.":
-                textLoading.text = "Loading.."; break;
-            case "Loading..":
-                textLoading.text = "Loading..."; break;
-            case "Loading...":
-                textLoading.text = "Loading"; break;
-            default:
-                textLoading.text = "Loading"; break;
-        }
-
-        coroutine = WaitOneTick();
-        StartCoroutine(coroutine);
-    }
-
-    IEnumerator WaitOneTick()
-    {
-        yield return new WaitForSeconds(1);
-        UpdateLoadingText();
     }
 
     IEnumerator LoadNewScene()
@@ -65,10 +39,10 @@ public class LoadingManager : MonoBehaviour
         yield return new WaitForSeconds(3);
 
         // Start an asynchronous operation to load the scene that was passed to the LoadNewScene coroutine.
-        AsyncOperation async = SceneManager.LoadSceneAsync("PuzzlePrototype");
+        AsyncOperation asyncLoad = SceneManager.LoadSceneAsync("PrototypeNew");
 
         // While the asynchronous operation to load the new scene is not yet complete, continue waiting until it's done.
-        while (!async.isDone)
+        while (!asyncLoad.isDone)
         {
             yield return null;
         }

@@ -4,25 +4,12 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-    //
-    public GameObject currentTarget;
+    public enum GameMode { LifeWithoutParole, DeathRow };
+    internal GameMode setGameMode;
 
-	// Use this for initialization
-	void Start ()
+    // Ensure this is never destroyed
+    void Awake()
     {
-        SpawnTarget();
-
+        DontDestroyOnLoad(gameObject);
     }
-
-    void SpawnTarget()
-    {
-        GameObject targetModel = Resources.Load("Model1") as GameObject;
-        currentTarget = Instantiate(targetModel, new Vector3(20, 0, 20), Quaternion.identity);
-    }
-	
-	// Update is called once per frame
-	void Update ()
-    {
-		
-	}
 }
