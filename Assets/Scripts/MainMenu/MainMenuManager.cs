@@ -28,6 +28,7 @@ public class MainMenuManager : MonoBehaviour
         {
             GameObject newGameManagerPrefab = Resources.Load("Common/GameManager") as GameObject;
             GameObject newGameNager = Instantiate(newGameManagerPrefab);
+            newGameNager.name = "GameManager";
             managerGame = newGameNager.GetComponent<GameManager>();
         }
 #else

@@ -23,9 +23,10 @@ GameObject:
   - component: {fileID: 114203123470811118}
   - component: {fileID: 54631479021884934}
   - component: {fileID: 82274433691969630}
+  - component: {fileID: 114054159273130972}
   m_Layer: 0
   m_Name: PlayerController
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -41,7 +42,6 @@ GameObject:
   - component: {fileID: 20832038563378006}
   - component: {fileID: 81752953189815114}
   - component: {fileID: 124526700715884158}
-  - component: {fileID: 114426844966603994}
   m_Layer: 0
   m_Name: FirstPersonCharacter
   m_TagString: MainCamera
@@ -74,7 +74,6 @@ GameObject:
   m_Component:
   - component: {fileID: 4102396020389914}
   - component: {fileID: 33168183030670658}
-  - component: {fileID: 135566262537263894}
   - component: {fileID: 23867525707080292}
   m_Layer: 9
   m_Name: MinimapIcon
@@ -354,6 +353,18 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 0
+--- !u!114 &114054159273130972
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1293369158507396}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8d1476ff87c7101409b398427dc590d2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  managerGUI: {fileID: 0}
 --- !u!114 &114203123470811118
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -406,7 +417,7 @@ MonoBehaviour:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-  m_UseHeadBob: 1
+  m_UseHeadBob: 0
   m_HeadBob:
     HorizontalBobRange: 0.1
     VerticalBobRange: 0.1
@@ -456,17 +467,6 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 8bc94ec6ed537e743b481638bdcd503d, type: 3}
   m_JumpSound: {fileID: 8300000, guid: 5897aeed9b676024fbb8c694b421a861, type: 3}
   m_LandSound: {fileID: 8300000, guid: 3b09d59f4499d45428baa7a21e954296, type: 3}
---- !u!114 &114426844966603994
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1524599853225658}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8d1476ff87c7101409b398427dc590d2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!124 &124526700715884158
 Behaviour:
   m_ObjectHideFlags: 1
@@ -474,18 +474,6 @@ Behaviour:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1524599853225658}
   m_Enabled: 1
---- !u!135 &135566262537263894
-SphereCollider:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1647988401780906}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.5
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!143 &143786563347999866
 CharacterController:
   m_ObjectHideFlags: 1
