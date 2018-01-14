@@ -1,0 +1,135 @@
+fileFormatVersion: 2
+guid: 9a37884b7b825ee419a6ebbdfe88c042
+timeCreated: 1515957109
+licenseType: Free
+ModelImporter:
+  serializedVersion: 22
+  fileIDToRecycleName:
+    100000: big_weel_l
+    100002: big_weel_r
+    100004: Cylinder
+    100006: seat
+    100008: small_weel_l
+    100010: small_weel_r
+    100012: //RootNode
+    100014: weel_cover_l
+    100016: weel_cover_r
+    400000: big_weel_l
+    400002: big_weel_r
+    400004: Cylinder
+    400006: seat
+    400008: small_weel_l
+    400010: small_weel_r
+    400012: //RootNode
+    400014: weel_cover_l
+    400016: weel_cover_r
+    2100000: unnamed
+    2100002: Material_002
+    2100004: Material_003
+    2100006: Material_001
+    2300000: big_weel_l
+    2300002: big_weel_r
+    2300004: Cylinder
+    2300006: seat
+    2300008: small_weel_l
+    2300010: small_weel_r
+    2300012: weel_cover_l
+    2300014: weel_cover_r
+    3300000: big_weel_l
+    3300002: big_weel_r
+    3300004: Cylinder
+    3300006: seat
+    3300008: small_weel_l
+    3300010: small_weel_r
+    3300012: weel_cover_l
+    3300014: weel_cover_r
+    4300000: weel_cover_r
+    4300002: Cylinder
+    4300004: weel_cover_l
+    4300006: small_weel_r
+    4300008: big_weel_r
+    4300010: big_weel_l
+    4300012: small_weel_l
+    4300014: seat
+    7400000: Default Take
+    9500000: //RootNode
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

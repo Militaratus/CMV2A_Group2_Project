@@ -1,0 +1,175 @@
+fileFormatVersion: 2
+guid: 7167dcae0a4bcb442b23fc13a28181d5
+timeCreated: 1515957107
+licenseType: Free
+ModelImporter:
+  serializedVersion: 22
+  fileIDToRecycleName:
+    100000: BezierCurve
+    100002: big_weel_l
+    100004: big_weel_r
+    100006: case
+    100008: cog
+    100010: cog1
+    100012: engine
+    100014: exhaust
+    100016: frame
+    100018: seat
+    100020: small_weel_r
+    100022: small_weel_r_001
+    100024: Torus_001
+    100026: //RootNode
+    100028: tubes
+    100030: weel_cover_l
+    100032: weel_cover_r
+    400000: BezierCurve
+    400002: big_weel_l
+    400004: big_weel_r
+    400006: case
+    400008: cog
+    400010: cog1
+    400012: engine
+    400014: exhaust
+    400016: frame
+    400018: seat
+    400020: small_weel_r
+    400022: small_weel_r_001
+    400024: Torus_001
+    400026: //RootNode
+    400028: tubes
+    400030: weel_cover_l
+    400032: weel_cover_r
+    2100000: Material_002
+    2100002: Material_001
+    2100004: Material_003
+    2100006: unnamed
+    2300000: BezierCurve
+    2300002: big_weel_l
+    2300004: big_weel_r
+    2300006: case
+    2300008: cog
+    2300010: cog1
+    2300012: engine
+    2300014: exhaust
+    2300016: frame
+    2300018: seat
+    2300020: small_weel_r
+    2300022: small_weel_r_001
+    2300024: Torus_001
+    2300026: tubes
+    2300028: weel_cover_l
+    2300030: weel_cover_r
+    3300000: BezierCurve
+    3300002: big_weel_l
+    3300004: big_weel_r
+    3300006: case
+    3300008: cog
+    3300010: cog1
+    3300012: engine
+    3300014: exhaust
+    3300016: frame
+    3300018: seat
+    3300020: small_weel_r
+    3300022: small_weel_r_001
+    3300024: Torus_001
+    3300026: tubes
+    3300028: weel_cover_l
+    3300030: weel_cover_r
+    4300000: small_weel_r_001
+    4300002: Torus_001
+    4300004: BezierCurve
+    4300006: exhaust
+    4300008: case
+    4300010: cog1
+    4300012: tubes
+    4300014: engine
+    4300016: weel_cover_r
+    4300018: frame
+    4300020: weel_cover_l
+    4300022: small_weel_r
+    4300024: big_weel_r
+    4300026: big_weel_l
+    4300028: seat
+    4300030: cog
+    7400000: Default Take
+    9500000: //RootNode
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

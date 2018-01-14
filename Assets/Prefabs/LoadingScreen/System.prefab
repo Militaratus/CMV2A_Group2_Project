@@ -129,7 +129,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 238bec1c8d2f8234b94cf466e9f937bc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  imageLoading: {fileID: 0}
+  exampleImage: {fileID: 0}
   exampleTitle: {fileID: 0}
   exampleDescription: {fileID: 0}
 --- !u!114 &114902708776114592
