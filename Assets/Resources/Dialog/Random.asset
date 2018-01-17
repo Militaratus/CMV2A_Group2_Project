@@ -1,0 +1,116 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: da95f5eff6d1ab54cb0e89220733a2df, type: 3}
+  m_Name: Random
+  m_EditorClassIdentifier: 
+  dialogue:
+  - responseText: There must be some kind of way outta here
+    completesObjective: 0
+    choice1Text: What?
+    choice1Path: 1
+    choice2Text: 
+    choice2Path: 0
+  - responseText: Said the joker to the thief
+    completesObjective: 0
+    choice1Text: What?
+    choice1Path: 2
+    choice2Text: 
+    choice2Path: 0
+  - responseText: There's too much confusion
+    completesObjective: 0
+    choice1Text: What?
+    choice1Path: 3
+    choice2Text: 
+    choice2Path: 0
+  - responseText: I can't get no relief
+    completesObjective: 0
+    choice1Text: What?
+    choice1Path: 4
+    choice2Text: 
+    choice2Path: 0
+  - responseText: Business men, they drink my wine
+    completesObjective: 0
+    choice1Text: What?
+    choice1Path: 5
+    choice2Text: 
+    choice2Path: 0
+  - responseText: Plowman dig my earth
+    completesObjective: 0
+    choice1Text: What?
+    choice1Path: 6
+    choice2Text: 
+    choice2Path: 0
+  - responseText: None were level on the mind
+    completesObjective: 0
+    choice1Text: What?
+    choice1Path: 7
+    choice2Text: 
+    choice2Path: 0
+  - responseText: Nobody up at his word
+    completesObjective: 0
+    choice1Text: What?
+    choice1Path: 8
+    choice2Text: 
+    choice2Path: 0
+  - responseText: Hey, hey
+    completesObjective: 0
+    choice1Text: What?
+    choice1Path: 9
+    choice2Text: 
+    choice2Path: 0
+  - responseText: No reason to get excited
+    completesObjective: 0
+    choice1Text: What?
+    choice1Path: 10
+    choice2Text: 
+    choice2Path: 0
+  - responseText: The thief he kindly spoke
+    completesObjective: 0
+    choice1Text: What?
+    choice1Path: 11
+    choice2Text: 
+    choice2Path: 0
+  - responseText: There are many here among us
+    completesObjective: 0
+    choice1Text: What?
+    choice1Path: 12
+    choice2Text: 
+    choice2Path: 0
+  - responseText: Who feel that life is but a joke
+    completesObjective: 0
+    choice1Text: What?
+    choice1Path: 13
+    choice2Text: 
+    choice2Path: 0
+  - responseText: But, uh, but you and I, we've been through that
+    completesObjective: 0
+    choice1Text: What?
+    choice1Path: 14
+    choice2Text: 
+    choice2Path: 0
+  - responseText: And this is not our fate
+    completesObjective: 0
+    choice1Text: What?
+    choice1Path: 15
+    choice2Text: 
+    choice2Path: 0
+  - responseText: So let us stop talkin' falsely now
+    completesObjective: 0
+    choice1Text: What?
+    choice1Path: 16
+    choice2Text: 
+    choice2Path: 0
+  - responseText: The hour's getting late, hey
+    completesObjective: 0
+    choice1Text: What?
+    choice1Path: 0
+    choice2Text: 
+    choice2Path: 0

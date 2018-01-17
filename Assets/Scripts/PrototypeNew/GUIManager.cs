@@ -5,9 +5,9 @@ using UnityEngine.UI;
 
 public class GUIManager : MonoBehaviour
 {
-    enum MenuPanel { Dialog, EscapePlan, HUD };
+    public enum MenuPanel { Dialog, EscapePlan, HUD };
 
-    private MenuPanel activePanel;
+    internal MenuPanel activePanel;
 
     public GameObject panelDialog;
     public GameObject panelEscapePlan;
@@ -24,7 +24,7 @@ public class GUIManager : MonoBehaviour
 
     }
 
-    void ActivatePanel(MenuPanel panel)
+    public void ActivatePanel(MenuPanel panel)
     {
         panelDialog.SetActive(false);
         panelEscapePlan.SetActive(false);
@@ -102,5 +102,13 @@ public class GUIManager : MonoBehaviour
     {
         inventorySlots[slot].color = Color.gray;
         inventorySlots[slot].transform.GetChild(0).GetComponent<InventoryImage>().HideImage();
+    }
+
+    public void ExpandInventory()
+    {
+        for (int i = 2; i < inventorySlots.Length; i++)
+        {
+            inventorySlots[i].color = Color.gray;
+        }
     }
 }

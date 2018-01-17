@@ -4,9 +4,13 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
+    GUIManager.MenuPanel openMenu = GUIManager.MenuPanel.HUD;
+
     public GameManager managerGame;
     public GUIManager managerGUI;
     public GameObject activeInventoryItem;
+
+
 
     UnityStandardAssets.Characters.FirstPerson.FirstPersonController saFPC;
     Transform myCamera;
@@ -59,12 +63,12 @@ public class PlayerController : MonoBehaviour
             myCamera.localPosition = new Vector3(0, 0.8f, 0);
         }
 
-        if (Input.GetButtonUp("Fire1"))
+        if (Input.GetButtonDown("Fire1") && !Blocked())
         {
             switch(hit.transform.tag)
             {
                 case "Character":
-                    Debug.Log("Open Dialog"); break;
+                    hit.transform.GetComponent<BaseCharacter>().Talk(); break;
                 case "Item":
                     hit.transform.GetComponent<BaseItem>().Collect(); break;
                 default:
@@ -101,6 +105,45 @@ public class PlayerController : MonoBehaviour
         {
             GetInventory(5);
         }
+
+        if (Input.GetButtonUp("ShowEscapePlan"))
+        {
+            Debug.Log("Fucking LOL");
+            if(openMenu != GUIManager.MenuPanel.EscapePlan)
+            {
+                OpenMenu(GUIManager.MenuPanel.EscapePlan);
+            }
+            else
+            {
+                CloseMenu();
+            }
+        }
+
+        if (Input.GetButtonUp("ShowPauseMenu"))
+        {
+            /*
+            if (openMenu != GUIManager.MenuPanel.EscapePlan)
+            {
+                OpenMenu(GUIManager.MenuPanel.EscapePlan);
+            }
+            else
+            {
+                CloseMenu();
+            }
+            */
+        }
+    }
+
+    void OpenMenu(GUIManager.MenuPanel menu)
+    {
+        openMenu = menu;
+        managerGUI.ActivatePanel(openMenu);
+    }
+
+    void CloseMenu()
+    {
+        openMenu = GUIManager.MenuPanel.HUD;
+        managerGUI.ActivatePanel(openMenu);
     }
 
     private void FixedUpdate()
@@ -128,6 +171,17 @@ public class PlayerController : MonoBehaviour
     bool Blocked()
     {
         bool amBlocked = false;
+
+        if (managerGUI.activePanel != GUIManager.MenuPanel.HUD)
+        {
+            amBlocked = true;
+            saFPC.m_MouseLook.SetCursorLock(false);
+        }
+        else
+        {
+
+            saFPC.m_MouseLook.SetCursorLock(true);
+        }
 
         return amBlocked;
     }

@@ -1565,14 +1565,19 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Left Mouse Button:
+  m_Text: 'Pick up / Interact:
 
-    Pick up / Interact
+    Left Mouse Button
 
 
-    Right Mouse Button:
+    Throw Away:
 
-    Throw away'
+    Right Mouse Button
+
+
+    Inventory Selection:
+
+    1, 2, 3, 4, 5, 6'
 --- !u!114 &114921044041563588
 MonoBehaviour:
   m_ObjectHideFlags: 1

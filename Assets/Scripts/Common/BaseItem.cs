@@ -24,6 +24,16 @@ public class BaseItem : MonoBehaviour
 #else
         managerGame = GameObject.Find("GameManager").GetComponent<GameManager>();
 #endif
+        gameObject.tag = "Item";
+        SpawnMinimapIcon();
+    }
+
+    void SpawnMinimapIcon()
+    {
+        GameObject newMinimapIconPrefab = Resources.Load("Common/ItemMinimapIcon") as GameObject;
+        GameObject newMinimapIcon = Instantiate(newMinimapIconPrefab, transform.position, Quaternion.identity);
+        newMinimapIcon.name = "MinimapIcon";
+        newMinimapIcon.transform.parent = transform;
     }
 
     public void Collect()

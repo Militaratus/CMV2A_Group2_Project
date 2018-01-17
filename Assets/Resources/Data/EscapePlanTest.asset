@@ -12,12 +12,12 @@ MonoBehaviour:
   m_Name: EscapePlanTest
   m_EditorClassIdentifier: 
   title: Operation Test Prototype
-  description: 'Author: Jared Nealon\n\nTime to see if I can create a scenario that
-    is easy to configure and execute.'
+  description: 'Author: Jared NealonNEWLINENEWLINETime to see if I can create a scenario
+    that is easy to configure and execute.'
   objectives:
   - taskType: 1
     taskTarget: Backpack
   - taskType: 2
     taskTarget: Solitary
   - taskType: 3
-    taskTarget: Chicken
+    taskTarget: Chicken Little

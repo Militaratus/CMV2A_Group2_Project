@@ -364,7 +364,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8d1476ff87c7101409b398427dc590d2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  managerGame: {fileID: 0}
   managerGUI: {fileID: 0}
+  activeInventoryItem: {fileID: 0}
 --- !u!114 &114203123470811118
 MonoBehaviour:
   m_ObjectHideFlags: 1

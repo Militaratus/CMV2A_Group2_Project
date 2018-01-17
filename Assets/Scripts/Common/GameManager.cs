@@ -12,6 +12,7 @@ public class GameManager : MonoBehaviour
 
     // Manager Tracker
     GUIManager managerGui;
+    EscapePlanManager managerEscapePlan;
 
     // Task Tracker
     public Task[] tasks = new Task[12];
@@ -69,14 +70,24 @@ public class GameManager : MonoBehaviour
             GameObject newItemPrefab = Resources.Load("Items/" + name) as GameObject;
             GameObject newItem = Instantiate(newItemPrefab);
             newItem.name = newItem.name.Replace("(Clone)", "");
-            newItem.transform.parent = player.GetChild(0);
+            newItem.transform.parent = Camera.main.transform;
             newItem.transform.localPosition = new Vector3(0, -0.8f, 1);
+            newItem.GetComponent<Collider>().enabled = false;
+            newItem.GetComponent<Rigidbody>().useGravity = false;
             newItem.SetActive(false);
 
             // Add it to the inventory
             inventory[openSlot] = newItem;
             managerGui.ShowInventory(openSlot, name);
             
+            // Expand Inventory if the item is a Backpack
+            if (newItem.GetComponent<Backpack>())
+            {
+                ExpandInventory();
+            }
+
+            // Complete Objective if this was a target
+            CompleteTask(Objective.Type.Collect, newItem.name);
 
             collected = true;
         }
@@ -113,6 +124,12 @@ public class GameManager : MonoBehaviour
 
     public void DropInventory(GameObject myItem)
     {
+        // Can't drop backpack, so FU!
+        if (myItem.GetComponent<Backpack>())
+        {
+            return;
+        }
+
         for (int i = 0; i < inventory.Length; i++)
         {
             if (inventory[i] == myItem)
@@ -122,6 +139,55 @@ public class GameManager : MonoBehaviour
                 myItem.GetComponent<Collider>().enabled = true;
                 myItem.GetComponent<Rigidbody>().useGravity = true;
                 inventory[i] = null;
+            }
+        }
+    }
+
+    void ExpandInventory()
+    {
+        GameObject[] oldInventory = inventory;
+        inventory = new GameObject[6];
+        for (int i = 0; i < oldInventory.Length; i++)
+        {
+            inventory[i] = oldInventory[i];
+        }
+        managerGui.ExpandInventory();
+    }
+
+    public void LoadTasks()
+    {
+        for (int i = 0; i < activeEscapePlan.objectives.Length; i++)
+        {
+            if (activeEscapePlan.objectives[i].taskType != Objective.Type.None)
+            {
+                tasks[i] = Task.Incomplete;
+            }
+            else
+            {
+                tasks[i] = Task.None;
+            }
+        }
+    }
+
+    public void CompleteTask(Objective.Type type, string target)
+    {
+        if (!managerEscapePlan)
+        {
+            managerEscapePlan = GameObject.Find("System/LevelManager").GetComponent<EscapePlanManager>();
+
+            if (!managerEscapePlan)
+            {
+                Debug.Log("ERROR: Where is Escape Plan Manager?");
+                return;
+            }
+        }
+
+        for (int i = 0; i < activeEscapePlan.objectives.Length; i++)
+        {
+            if (activeEscapePlan.objectives[i].taskType == type && activeEscapePlan.objectives[i].taskTarget == target)
+            {
+                tasks[i] = Task.Complete;
+                managerEscapePlan.UpdatePanel(i);
             }
         }
     }

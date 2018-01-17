@@ -51,3 +51,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 08054e9e84522194baf5c7f42290eeb2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  activeEscapePlan: {fileID: 11400000, guid: 35cf28ec83d752b45b24c563b3291a64, type: 2}
+  inventory:
+  - {fileID: 0}
+  - {fileID: 0}
+  tasks: 000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+  player: {fileID: 0}
