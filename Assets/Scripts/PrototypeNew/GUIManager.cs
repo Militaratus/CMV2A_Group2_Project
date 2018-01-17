@@ -7,7 +7,7 @@ public class GUIManager : MonoBehaviour
 {
     public enum MenuPanel { Dialog, EscapePlan, HUD };
 
-    internal MenuPanel activePanel;
+    internal MenuPanel activePanel = MenuPanel.HUD;
 
     public GameObject panelDialog;
     public GameObject panelEscapePlan;
@@ -17,7 +17,7 @@ public class GUIManager : MonoBehaviour
     public Text textInteract;
 
 	// Use this for initialization
-	void Start ()
+	void Awake ()
     {
         ActivatePanel(MenuPanel.HUD);
         HideInteractionIcon();
@@ -68,6 +68,16 @@ public class GUIManager : MonoBehaviour
         }
 
         textInteract.text = "[ INTERACT ]\nto Collect";
+    }
+
+    public void ShowInteractIconOpen()
+    {
+        if (!ShowHUD())
+        {
+            return;
+        }
+
+        textInteract.text = "[ INTERACT ]\nto Open";
     }
 
     public void HideInteractionIcon()

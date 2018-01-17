@@ -551,7 +551,7 @@ MonoBehaviour:
 
     Sneak Toggle:
 
-    CTRL'
+    C'
 --- !u!114 &114104504741991572
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1573,6 +1573,11 @@ MonoBehaviour:
     Throw Away:
 
     Right Mouse Button
+
+
+    Escape Plan:
+
+    J
 
 
     Inventory Selection:

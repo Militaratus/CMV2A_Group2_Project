@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -9,6 +10,8 @@ public class GameManager : MonoBehaviour
     internal GameMode setGameMode;
     public EscapePlan activeEscapePlan;
     public GameObject[] inventory = new GameObject[2];
+
+    public string nextScene = "";
 
     // Manager Tracker
     GUIManager managerGui;
@@ -190,5 +193,11 @@ public class GameManager : MonoBehaviour
                 managerEscapePlan.UpdatePanel(i);
             }
         }
+    }
+
+    public void LoadLevel(string nextLevel)
+    {
+        nextScene = nextLevel;
+        SceneManager.LoadSceneAsync("LoadingScreen");
     }
 }

@@ -35,6 +35,7 @@ public class PlayerController : MonoBehaviour
 #else
         managerGame = GameObject.Find("GameManager").GetComponent<GameManager>();
 #endif
+        managerGUI = GameObject.Find("System/LevelManager").GetComponent<GUIManager>();
 
         // Set Camera reference to shortcut
         myCamera = Camera.main.transform;
@@ -71,6 +72,8 @@ public class PlayerController : MonoBehaviour
                     hit.transform.GetComponent<BaseCharacter>().Talk(); break;
                 case "Item":
                     hit.transform.GetComponent<BaseItem>().Collect(); break;
+                case "Door":
+                    hit.transform.GetComponent<BaseDoor>().Open(); break;
                 default:
                     Debug.Log("ERROR: Player is shooting at ghosts!"); break;
             }
@@ -158,6 +161,8 @@ public class PlayerController : MonoBehaviour
                     managerGUI.ShowInteractIconTalk(); break;
                 case "Item":
                     managerGUI.ShowInteractIconCollect(); break;
+                case "Door":
+                    managerGUI.ShowInteractIconOpen(); break;
                 default:
                     managerGUI.HideInteractionIcon(); break;
             }
