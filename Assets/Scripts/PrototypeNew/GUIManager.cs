@@ -80,6 +80,16 @@ public class GUIManager : MonoBehaviour
         textInteract.text = "[ INTERACT ]\nto Open";
     }
 
+    public void ShowInteractIconUse()
+    {
+        if (!ShowHUD())
+        {
+            return;
+        }
+
+        textInteract.text = "[ INTERACT ]\nto Use";
+    }
+
     public void ShowInteractIconLocked()
     {
         if (!ShowHUD())

@@ -10,6 +10,7 @@ public class GameManager : MonoBehaviour
     internal GameMode setGameMode;
     public EscapePlan activeEscapePlan;
     public GameObject[] inventory = new GameObject[2];
+    public string[] lastInventory;
 
     public string nextScene = "";
 
@@ -38,6 +39,17 @@ public class GameManager : MonoBehaviour
         }
 
 
+    }
+
+    public void GiveInventory()
+    {
+        for (int i = 0; i < lastInventory.Length; i++)
+        {
+            if (lastInventory[i] != "" && lastInventory[i] != null)
+            {
+                Collect(lastInventory[i]);
+            }
+        }
     }
     
     public bool Collect(string name)
@@ -197,6 +209,19 @@ public class GameManager : MonoBehaviour
 
     public void LoadLevel(string nextLevel)
     {
+        lastInventory = new string[inventory.Length];
+        for (int i = 0; i < inventory.Length; i++)
+        {
+            if (inventory[i] == null)
+            {
+                lastInventory[i] = "";
+            }
+            else
+            {
+                lastInventory[i] = inventory[i].name;
+            }
+        }
+
         nextScene = nextLevel;
         SceneManager.LoadSceneAsync("LoadingScreen");
     }

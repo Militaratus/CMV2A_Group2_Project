@@ -43,13 +43,22 @@ public class PlayerController : MonoBehaviour
         // Get Standard Asset Component
         saFPC = GetComponent<UnityStandardAssets.Characters.FirstPerson.FirstPersonController>();
 
+        // Grab Inventory from previous load
+        GrabInventory();
+    }
+
+    void GrabInventory()
+    {
+        managerGame.GiveInventory();
     }
 	
 	// Update is called once per frame
 	void Update ()
     {
         ExtraInput();
-	}
+        FuckGravity();
+
+    }
 
     void ExtraInput()
     {
@@ -74,6 +83,8 @@ public class PlayerController : MonoBehaviour
                     hit.transform.GetComponent<BaseItem>().Collect(); break;
                 case "Door":
                     hit.transform.GetComponent<BaseDoor>().Open(activeInventoryItem); break;
+                case "Use":
+                    hit.transform.GetComponent<BaseUse>().Use(); break;
                 default:
                     Debug.Log("ERROR: Player is shooting at ghosts!"); break;
             }
@@ -137,6 +148,25 @@ public class PlayerController : MonoBehaviour
         }
     }
 
+    void FuckGravity()
+    {
+        if (activeInventoryItem == null)
+        {
+            return;
+        }
+
+        if (activeInventoryItem.name == "Chicken Flyer")
+        {
+            saFPC.m_GravityMultiplier = 1;
+            GetComponent<Rigidbody>().useGravity = false;
+        }
+        else
+        {
+            saFPC.m_GravityMultiplier = 3;
+            GetComponent<Rigidbody>().useGravity = false;
+        }
+    }
+
     void OpenMenu(GUIManager.MenuPanel menu)
     {
         openMenu = menu;
@@ -163,6 +193,8 @@ public class PlayerController : MonoBehaviour
                     managerGUI.ShowInteractIconCollect(); break;
                 case "Door":
                     CheckLock(); break;
+                case "Use":
+                    managerGUI.ShowInteractIconUse(); break;
                 default:
                     managerGUI.HideInteractionIcon(); break;
             }
