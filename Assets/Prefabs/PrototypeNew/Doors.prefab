@@ -69,6 +69,7 @@ GameObject:
   - component: {fileID: 4483551505797162}
   - component: {fileID: 65077616415714712}
   - component: {fileID: 54163277259391938}
+  - component: {fileID: 114101232564561040}
   m_Layer: 0
   m_Name: TestDoor
   m_TagString: Untagged
@@ -433,3 +434,16 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &114101232564561040
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1320314168462844}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4cbf490264104024fbf87c745e4ece45, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  key: {fileID: 1296042028754078, guid: 5b6619fd97aac8d4eaac976f5398c07d, type: 2}
+  levelName: Solitary

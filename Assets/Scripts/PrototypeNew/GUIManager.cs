@@ -80,6 +80,16 @@ public class GUIManager : MonoBehaviour
         textInteract.text = "[ INTERACT ]\nto Open";
     }
 
+    public void ShowInteractIconLocked()
+    {
+        if (!ShowHUD())
+        {
+            return;
+        }
+
+        textInteract.text = "Locked with a Key";
+    }
+
     public void HideInteractionIcon()
     {
         if (!ShowHUD())

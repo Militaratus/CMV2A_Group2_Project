@@ -13,7 +13,7 @@ public class EscapePlan : ScriptableObject
 [System.Serializable]
 public class Objective
 {
-    public enum Type { None, Collect, Enter, Talk }
+    public enum Type { None, Collect, Enter, Talk, Use }
     public Type taskType;
     public string taskTarget;
 }

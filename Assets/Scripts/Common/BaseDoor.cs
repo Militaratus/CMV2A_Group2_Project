@@ -7,6 +7,8 @@ public class BaseDoor : MonoBehaviour
     // Managers
     GameManager managerGame;
 
+
+    public GameObject key;
     public string levelName;
 
     private void Awake()
@@ -26,10 +28,25 @@ public class BaseDoor : MonoBehaviour
 #else
         managerGame = GameObject.Find("GameManager").GetComponent<GameManager>();
 #endif
+        gameObject.tag = "Door";
     }
 
-    public void Open()
+    public void Open(GameObject possibleKey)
     {
-        managerGame.LoadLevel(levelName);
+        if (!key)
+        {
+            managerGame.LoadLevel(levelName);
+            return;
+        }
+
+        if (!possibleKey)
+        {
+            return;
+        }
+
+        if (key.name == possibleKey.name)
+        {
+            managerGame.LoadLevel(levelName);
+        }
     }
 }

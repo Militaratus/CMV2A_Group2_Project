@@ -5,6 +5,12 @@ using UnityEngine;
 public class BaseEnemy : MonoBehaviour
 {
     GameManager managerGame;
+    Transform player;
+
+    Rigidbody myRigidbody;
+
+    bool lured = false;
+    GameObject lureObject;
 
     // Use this for initialization
     private void Awake()
@@ -26,6 +32,8 @@ public class BaseEnemy : MonoBehaviour
 #endif
         gameObject.tag = "Enemy";
         SpawnMinimapIcon();
+        player = GameObject.FindGameObjectWithTag("Player").transform;
+        myRigidbody = GetComponent<Rigidbody>();
     }
 
     void SpawnMinimapIcon()
@@ -34,5 +42,34 @@ public class BaseEnemy : MonoBehaviour
         GameObject newMinimapIcon = Instantiate(newMinimapIconPrefab, transform.position, Quaternion.identity);
         newMinimapIcon.name = "MinimapIcon";
         newMinimapIcon.transform.parent = transform;
+    }
+
+    private void Update()
+    {
+        if (!lured)
+        {
+            transform.LookAt(player);
+        }
+        else
+        {
+            if (lureObject)
+            {
+                if (Vector3.Distance(transform.position, lureObject.transform.position) > 5.0f)
+                {
+                    transform.LookAt(lureObject.transform.position);
+                    myRigidbody.velocity = transform.forward * 2.0f; ;
+                }
+            }
+            else
+            {
+                lured = false;
+            }
+        }
+    }
+
+    public void Lure(GameObject location)
+    {
+        lureObject = location;
+        lured = true;
     }
 }

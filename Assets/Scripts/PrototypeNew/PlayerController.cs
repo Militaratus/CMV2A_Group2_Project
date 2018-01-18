@@ -73,7 +73,7 @@ public class PlayerController : MonoBehaviour
                 case "Item":
                     hit.transform.GetComponent<BaseItem>().Collect(); break;
                 case "Door":
-                    hit.transform.GetComponent<BaseDoor>().Open(); break;
+                    hit.transform.GetComponent<BaseDoor>().Open(activeInventoryItem); break;
                 default:
                     Debug.Log("ERROR: Player is shooting at ghosts!"); break;
             }
@@ -162,7 +162,7 @@ public class PlayerController : MonoBehaviour
                 case "Item":
                     managerGUI.ShowInteractIconCollect(); break;
                 case "Door":
-                    managerGUI.ShowInteractIconOpen(); break;
+                    CheckLock(); break;
                 default:
                     managerGUI.HideInteractionIcon(); break;
             }
@@ -170,6 +170,33 @@ public class PlayerController : MonoBehaviour
         else
         {
             managerGUI.HideInteractionIcon();
+        }
+    }
+
+    void CheckLock()
+    {
+        // Does it need a key?
+        if (!hit.transform.GetComponent<BaseDoor>().key)
+        {
+            managerGUI.ShowInteractIconOpen();
+            return;
+        }
+
+        // Do I even have an item equipped?
+        if (!activeInventoryItem)
+        {
+            managerGUI.ShowInteractIconLocked();
+            return;
+        }
+
+        // Does the item match?
+        if (activeInventoryItem.name == hit.transform.GetComponent<BaseDoor>().key.name)
+        {
+            managerGUI.ShowInteractIconOpen();
+        }
+        else
+        {
+            managerGUI.ShowInteractIconLocked();
         }
     }
 

@@ -2348,7 +2348,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &1329561066539974
 GameObject:
   m_ObjectHideFlags: 1
@@ -5119,6 +5119,23 @@ GameObject:
   - component: {fileID: 23394408948810820}
   m_Layer: 8
   m_Name: Solitary/Chicken coop
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &1732907261764166
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4490282832822644}
+  - component: {fileID: 33269470124555026}
+  - component: {fileID: 23930368111331138}
+  m_Layer: 0
+  m_Name: Farmer House + Textures FINISH
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8628,8 +8645,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1456781606812886}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 24.48, y: 0.099999905, z: 79.79}
-  m_LocalScale: {x: 10, y: 10, z: 10}
+  m_LocalPosition: {x: 24.561, y: -0.07, z: 81.38}
+  m_LocalScale: {x: 8.197585, y: 8.197584, z: 8.197584}
   m_Children:
   - {fileID: 4051861769497372}
   - {fileID: 4521435163955554}
@@ -10213,6 +10230,19 @@ Transform:
   m_Father: {fileID: 4886162854113210}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4490282832822644
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1732907261764166}
+  m_LocalRotation: {x: -0, y: 0.7071068, z: 0.7071068, w: 0}
+  m_LocalPosition: {x: 64.14, y: 2.25, z: 123.49}
+  m_LocalScale: {x: 510.85727, y: 305.7852, z: 197.45093}
+  m_Children: []
+  m_Father: {fileID: 4828701377069992}
+  m_RootOrder: 21
+  m_LocalEulerAnglesHint: {x: -90, y: 180, z: 0}
 --- !u!4 &4492614499201854
 Transform:
   m_ObjectHideFlags: 1
@@ -10326,8 +10356,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1671290964247224}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 24.89, y: -0.01000011, z: 103.95}
-  m_LocalScale: {x: 10, y: 10, z: 10}
+  m_LocalPosition: {x: 24.897, y: -0.16017997, z: 103.49}
+  m_LocalScale: {x: 8.197585, y: 8.197584, z: 8.197584}
   m_Children:
   - {fileID: 4127170477924118}
   - {fileID: 4348183694444340}
@@ -12167,6 +12197,7 @@ Transform:
   - {fileID: 4505020706320394}
   - {fileID: 4246474489076462}
   - {fileID: 4878637606356726}
+  - {fileID: 4490282832822644}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -23811,6 +23842,54 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!23 &23930368111331138
+MeshRenderer:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1732907261764166}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_Materials:
+  - {fileID: 2100000, guid: 43e2ce77d410ffb46b92f5f956cdf62d, type: 3}
+  - {fileID: 2100002, guid: 43e2ce77d410ffb46b92f5f956cdf62d, type: 3}
+  - {fileID: 2100004, guid: 43e2ce77d410ffb46b92f5f956cdf62d, type: 3}
+  - {fileID: 2100006, guid: 43e2ce77d410ffb46b92f5f956cdf62d, type: 3}
+  - {fileID: 2100008, guid: 43e2ce77d410ffb46b92f5f956cdf62d, type: 3}
+  - {fileID: 2100010, guid: 43e2ce77d410ffb46b92f5f956cdf62d, type: 3}
+  - {fileID: 2100012, guid: 43e2ce77d410ffb46b92f5f956cdf62d, type: 3}
+  - {fileID: 2100014, guid: 43e2ce77d410ffb46b92f5f956cdf62d, type: 3}
+  - {fileID: 2100016, guid: 43e2ce77d410ffb46b92f5f956cdf62d, type: 3}
+  - {fileID: 2100018, guid: 43e2ce77d410ffb46b92f5f956cdf62d, type: 3}
+  - {fileID: 2100020, guid: 43e2ce77d410ffb46b92f5f956cdf62d, type: 3}
+  - {fileID: 2100022, guid: 43e2ce77d410ffb46b92f5f956cdf62d, type: 3}
+  - {fileID: 2100024, guid: 43e2ce77d410ffb46b92f5f956cdf62d, type: 3}
+  - {fileID: 2100026, guid: 43e2ce77d410ffb46b92f5f956cdf62d, type: 3}
+  - {fileID: 2100028, guid: 43e2ce77d410ffb46b92f5f956cdf62d, type: 3}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
 --- !u!23 &23938928647368914
 MeshRenderer:
   m_ObjectHideFlags: 1
@@ -24866,6 +24945,13 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1343470299054636}
   m_Mesh: {fileID: 4300020, guid: 6cbdb0ad0b580324cb092060175862e6, type: 3}
+--- !u!33 &33269470124555026
+MeshFilter:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1732907261764166}
+  m_Mesh: {fileID: 4300000, guid: 43e2ce77d410ffb46b92f5f956cdf62d, type: 3}
 --- !u!33 &33270067236170760
 MeshFilter:
   m_ObjectHideFlags: 1
@@ -28511,7 +28597,7 @@ Light:
   m_SpotAngle: 90
   m_CookieSize: 10
   m_Shadows:
-    m_Type: 0
+    m_Type: 1
     m_Resolution: -1
     m_CustomResolution: -1
     m_Strength: 1
@@ -28547,7 +28633,7 @@ Light:
   m_SpotAngle: 120
   m_CookieSize: 10
   m_Shadows:
-    m_Type: 0
+    m_Type: 1
     m_Resolution: -1
     m_CustomResolution: -1
     m_Strength: 1
@@ -28583,7 +28669,7 @@ Light:
   m_SpotAngle: 90
   m_CookieSize: 10
   m_Shadows:
-    m_Type: 0
+    m_Type: 1
     m_Resolution: -1
     m_CustomResolution: -1
     m_Strength: 1
@@ -28619,7 +28705,7 @@ Light:
   m_SpotAngle: 120
   m_CookieSize: 10
   m_Shadows:
-    m_Type: 0
+    m_Type: 1
     m_Resolution: -1
     m_CustomResolution: -1
     m_Strength: 1
@@ -28655,7 +28741,7 @@ Light:
   m_SpotAngle: 120
   m_CookieSize: 10
   m_Shadows:
-    m_Type: 0
+    m_Type: 1
     m_Resolution: -1
     m_CustomResolution: -1
     m_Strength: 1
@@ -28691,7 +28777,7 @@ Light:
   m_SpotAngle: 120
   m_CookieSize: 10
   m_Shadows:
-    m_Type: 0
+    m_Type: 1
     m_Resolution: -1
     m_CustomResolution: -1
     m_Strength: 1

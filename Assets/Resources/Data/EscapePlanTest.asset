@@ -11,13 +11,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f7f02280d93ed73429ef292e370698e9, type: 3}
   m_Name: EscapePlanTest
   m_EditorClassIdentifier: 
-  title: Operation Test Prototype
-  description: 'Author: Jared NealonNEWLINENEWLINETime to see if I can create a scenario
-    that is easy to configure and execute.'
+  title: Operation Top Gun
+  description: I woke up in this prison-like farm that is still under construction.
+    I am surrounded by a mixture of animals and cardboards that speak!NEWLINENEWLINEI
+    must find someway out of here. I must escape The Famr!
   objectives:
   - taskType: 1
     taskTarget: Backpack
+  - taskType: 1
+    taskTarget: Solitary Key
   - taskType: 2
     taskTarget: Solitary
-  - taskType: 3
-    taskTarget: Chicken Little
+  - taskType: 4
+    taskTarget: Solitary Release
+  - taskType: 1
+    taskTarget: Chicken Flyer
+  - taskType: 2
+    taskTarget: Silo Roof
+  - taskType: 2
+    taskTarget: Farm Exterior
