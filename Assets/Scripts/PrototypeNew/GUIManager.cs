@@ -57,6 +57,8 @@ public class GUIManager : MonoBehaviour
             return;
         }
 
+        textInteract.transform.parent.parent.gameObject.SetActive(true);
+
         textInteract.text = "[ INTERACT ]\nto Talk";
     }
 
@@ -66,7 +68,7 @@ public class GUIManager : MonoBehaviour
         {
             return;
         }
-
+        textInteract.transform.parent.parent.gameObject.SetActive(true);
         textInteract.text = "[ INTERACT ]\nto Collect";
     }
 
@@ -76,7 +78,7 @@ public class GUIManager : MonoBehaviour
         {
             return;
         }
-
+        textInteract.transform.parent.parent.gameObject.SetActive(true);
         textInteract.text = "[ INTERACT ]\nto Open";
     }
 
@@ -86,7 +88,7 @@ public class GUIManager : MonoBehaviour
         {
             return;
         }
-
+        textInteract.transform.parent.parent.gameObject.SetActive(true);
         textInteract.text = "[ INTERACT ]\nto Use";
     }
 
@@ -96,7 +98,7 @@ public class GUIManager : MonoBehaviour
         {
             return;
         }
-
+        textInteract.transform.parent.parent.gameObject.SetActive(true);
         textInteract.text = "Locked with a Key";
     }
 
@@ -106,7 +108,7 @@ public class GUIManager : MonoBehaviour
         {
             return;
         }
-
+        textInteract.transform.parent.parent.gameObject.SetActive(false);
         textInteract.text = "";
     }
 

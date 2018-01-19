@@ -1,0 +1,34 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: da95f5eff6d1ab54cb0e89220733a2df, type: 3}
+  m_Name: KeyTutorial
+  m_EditorClassIdentifier: 
+  dialogue:
+  - responseText: Hello Neo. How can I help you?
+    completesObjective: 0
+    choice1Text: Keymaster?
+    choice1Path: 1
+    choice2Text: 
+    choice2Path: 0
+  - responseText: I was the Keymaster, once. However, I only made 1 key and it leads
+      to the Solitary.
+    completesObjective: 0
+    choice1Text: Key?
+    choice1Path: 2
+    choice2Text: 
+    choice2Path: 0
+  - responseText: The guard dogs stole it and stored it in one of their doghouses.
+      They keep guarding it, though.
+    completesObjective: 0
+    choice1Text: 
+    choice1Path: 0
+    choice2Text: 
+    choice2Path: 0

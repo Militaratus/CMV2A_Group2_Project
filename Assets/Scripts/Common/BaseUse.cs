@@ -35,6 +35,8 @@ public class BaseUse : MonoBehaviour
     // Use this for initialization
     public void Use ()
     {
+        managerGame.CompleteTask(Objective.Type.Use, gameObject.name);
+
 		switch (objectDirection)
         {
             case ObjectDirection.Down:
