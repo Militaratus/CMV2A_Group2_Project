@@ -23,7 +23,7 @@ GameObject:
   - component: {fileID: 23335266970695246}
   m_Layer: 0
   m_Name: Circular Wire
-  m_TagString: Untagged
+  m_TagString: Barbwire
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -40,7 +40,7 @@ GameObject:
   - component: {fileID: 23647981928302868}
   m_Layer: 0
   m_Name: Cylinder
-  m_TagString: Untagged
+  m_TagString: Barbwire
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
