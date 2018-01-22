@@ -23,9 +23,10 @@ GameObject:
   - component: {fileID: 65301834792073062}
   - component: {fileID: 23007740484981232}
   - component: {fileID: 54873117501126526}
+  - component: {fileID: 64292413134016212}
   m_Layer: 0
   m_Name: crate
-  m_TagString: Untagged
+  m_TagString: Item
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -67,8 +68,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1147896261124944}
-  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 136.44307, y: 0, z: 114.5259}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 123.94435, y: 0, z: 114.40998}
   m_LocalScale: {x: 0.3149606, y: 0.3149606, z: 0.3149606}
   m_Children:
   - {fileID: 4829053122528152}
@@ -166,6 +167,20 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!64 &64292413134016212
+MeshCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1147896261124944}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 0
+  m_CookingOptions: 14
+  m_SkinWidth: 0.01
+  m_Mesh: {fileID: 0}
 --- !u!64 &64722040836457222
 MeshCollider:
   m_ObjectHideFlags: 1
@@ -188,10 +203,10 @@ BoxCollider:
   m_GameObject: {fileID: 1147896261124944}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 3.706243, y: 3.4468448, z: 3.0710835}
+  m_Center: {x: -0.20491764, y: 1.2234218, z: -0.08201954}
 --- !u!114 &114492548305682822
 MonoBehaviour:
   m_ObjectHideFlags: 1
