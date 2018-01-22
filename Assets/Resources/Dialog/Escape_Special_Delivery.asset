@@ -16,6 +16,10 @@ MonoBehaviour:
   objectives:
   - taskType: 0
     taskTarget: Distract the guards watching the truck
+  - taskType: 1
+    taskTarget: Find bones to distract the dogs...
+  - taskType: 1
+    taskTarget: Another Chicken coup...
   - taskType: 0
     taskTarget: Get to the back of the truck
   - taskType: 2
