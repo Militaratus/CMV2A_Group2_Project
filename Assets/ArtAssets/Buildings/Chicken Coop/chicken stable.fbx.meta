@@ -1,0 +1,181 @@
+fileFormatVersion: 2
+guid: 1bfc6b3f395f2d944a01b37f4ca96a63
+timeCreated: 1516463584
+licenseType: Free
+ModelImporter:
+  serializedVersion: 22
+  fileIDToRecycleName:
+    100000: back wall
+    100002: chicken cage
+    100004: //RootNode
+    100006: Cube
+    100008: metal plate
+    100010: metal plate 2
+    100012: metal plate 3
+    100014: shovel
+    100016: side
+    100018: side wall
+    100020: sides
+    100022: window "glass"
+    100024: window "glass".001
+    100026: wood around window
+    100028: wood around window.001
+    100030: wooden window
+    100032: wooden window.001
+    400000: back wall
+    400002: chicken cage
+    400004: //RootNode
+    400006: Cube
+    400008: metal plate
+    400010: metal plate 2
+    400012: metal plate 3
+    400014: shovel
+    400016: side
+    400018: side wall
+    400020: sides
+    400022: window "glass"
+    400024: window "glass".001
+    400026: wood around window
+    400028: wood around window.001
+    400030: wooden window
+    400032: wooden window.001
+    2100000: Texture Rust.001
+    2100002: Material.012
+    2100004: Material.007
+    2100006: Material.006
+    2100008: wooden window border
+    2100010: wood around window
+    2100012: window glass
+    2100014: Material.002
+    2100016: Material.003
+    2100018: Material
+    2100020: Texture rust.002
+    2100022: shovel
+    2300000: back wall
+    2300002: chicken cage
+    2300004: Cube
+    2300006: metal plate
+    2300008: metal plate 2
+    2300010: metal plate 3
+    2300012: shovel
+    2300014: side
+    2300016: side wall
+    2300018: sides
+    2300020: window "glass"
+    2300022: window "glass".001
+    2300024: wood around window
+    2300026: wood around window.001
+    2300028: wooden window
+    2300030: wooden window.001
+    3300000: back wall
+    3300002: chicken cage
+    3300004: Cube
+    3300006: metal plate
+    3300008: metal plate 2
+    3300010: metal plate 3
+    3300012: shovel
+    3300014: side
+    3300016: side wall
+    3300018: sides
+    3300020: window "glass"
+    3300022: window "glass".001
+    3300024: wood around window
+    3300026: wood around window.001
+    3300028: wooden window
+    3300030: wooden window.001
+    4300000: metal plate 3
+    4300002: Cube
+    4300004: side
+    4300006: side wall
+    4300008: wooden window.001
+    4300010: wood around window.001
+    4300012: window "glass".001
+    4300014: window "glass"
+    4300016: wood around window
+    4300018: sides
+    4300020: chicken cage
+    4300022: wooden window
+    4300024: back wall
+    4300026: metal plate
+    4300028: metal plate 2
+    4300030: shovel
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

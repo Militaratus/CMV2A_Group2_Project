@@ -1,0 +1,135 @@
+fileFormatVersion: 2
+guid: c28d0d92a79db7b41a8d90c014fcfaf8
+timeCreated: 1516365597
+licenseType: Free
+ModelImporter:
+  serializedVersion: 22
+  fileIDToRecycleName:
+    100000: beware of dog plate
+    100002: danger plate
+    100004: danger plate 2
+    100006: //RootNode
+    100008: door
+    100010: floor
+    100012: house itself
+    100014: roof + wood
+    100016: rusty nails
+    400000: beware of dog plate
+    400002: danger plate
+    400004: danger plate 2
+    400006: //RootNode
+    400008: door
+    400010: floor
+    400012: house itself
+    400014: roof + wood
+    400016: rusty nails
+    2100000: Material.004
+    2100002: Material.003
+    2100004: House Texture
+    2100006: danger plate
+    2100008: beware of dog plate
+    2100010: Nails
+    2300000: beware of dog plate
+    2300002: danger plate
+    2300004: danger plate 2
+    2300006: door
+    2300008: floor
+    2300010: house itself
+    2300012: roof + wood
+    2300014: rusty nails
+    3300000: beware of dog plate
+    3300002: danger plate
+    3300004: danger plate 2
+    3300006: door
+    3300008: floor
+    3300010: house itself
+    3300012: roof + wood
+    3300014: rusty nails
+    4300000: floor
+    4300002: door
+    4300004: roof + wood
+    4300006: house itself
+    4300008: danger plate
+    4300010: danger plate 2
+    4300012: beware of dog plate
+    4300014: rusty nails
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -1,0 +1,202 @@
+fileFormatVersion: 2
+guid: d21db99f75f4cb243bbee060c6075924
+timeCreated: 1516278117
+licenseType: Free
+ModelImporter:
+  serializedVersion: 22
+  fileIDToRecycleName:
+    100000: air things
+    100002: back wall
+    100004: chimney
+    100006: door
+    100008: door ahndle
+    100010: //RootNode
+    100012: front wall
+    100014: idk what to call this
+    100016: part of the roof
+    100018: ROOF
+    100020: roof side
+    100022: rusty nails
+    100024: side walls
+    100026: thing inside chimney
+    100028: window "glass"
+    100030: window border front
+    100032: windows.000
+    100034: WOOD 1
+    100036: wood 2
+    100038: wood around windows n door
+    400000: air things
+    400002: back wall
+    400004: chimney
+    400006: door
+    400008: door ahndle
+    400010: //RootNode
+    400012: front wall
+    400014: idk what to call this
+    400016: part of the roof
+    400018: ROOF
+    400020: roof side
+    400022: rusty nails
+    400024: side walls
+    400026: thing inside chimney
+    400028: window "glass"
+    400030: window border front
+    400032: windows.000
+    400034: WOOD 1
+    400036: wood 2
+    400038: wood around windows n door
+    2100000: Roof top
+    2100002: Wood_
+    2100004: Brick wall.001
+    2100006: Brick wall.002
+    2100008: Brick wall.003
+    2100010: Brick wall
+    2100012: No Name
+    2100014: Window _glass'
+    2100016: Wooden Door
+    2100018: rusty nails
+    2100020: Door handle
+    2100022: Grey air thingies
+    2100024: Part of roof
+    2100026: Roof Sides
+    2100028: Weird ass faces that I still needed
+    2100030: Window Border
+    2100032: Window Border.001
+    2100034: Wood 2
+    2300000: air things
+    2300002: back wall
+    2300004: chimney
+    2300006: door
+    2300008: door ahndle
+    2300010: front wall
+    2300012: idk what to call this
+    2300014: part of the roof
+    2300016: ROOF
+    2300018: roof side
+    2300020: rusty nails
+    2300022: side walls
+    2300024: thing inside chimney
+    2300026: window "glass"
+    2300028: window border front
+    2300030: windows.000
+    2300032: WOOD 1
+    2300034: wood 2
+    2300036: wood around windows n door
+    3300000: air things
+    3300002: back wall
+    3300004: chimney
+    3300006: door
+    3300008: door ahndle
+    3300010: front wall
+    3300012: idk what to call this
+    3300014: part of the roof
+    3300016: ROOF
+    3300018: roof side
+    3300020: rusty nails
+    3300022: side walls
+    3300024: thing inside chimney
+    3300026: window "glass"
+    3300028: window border front
+    3300030: windows.000
+    3300032: WOOD 1
+    3300034: wood 2
+    3300036: wood around windows n door
+    4300000: ROOF
+    4300002: WOOD 1
+    4300004: front wall
+    4300006: back wall
+    4300008: side walls
+    4300010: chimney
+    4300012: thing inside chimney
+    4300014: window "glass"
+    4300016: door
+    4300018: rusty nails
+    4300020: door ahndle
+    4300022: air things
+    4300024: part of the roof
+    4300026: roof side
+    4300028: idk what to call this
+    4300030: wood around windows n door
+    4300032: window border front
+    4300034: windows.000
+    4300036: wood 2
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
