@@ -9,6 +9,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: da95f5eff6d1ab54cb0e89220733a2df, type: 3}
-  m_Name: Chicken
+  m_Name: Chicken_1
   m_EditorClassIdentifier: 
-  dialogue: []
+  dialogue:
+  - responseText: Move along fish, keep your head down and MOVE!
+    completesObjective: 0
+    choice1Text: Can we talk?
+    choice1Path: 1
+    choice2Text: 
+    choice2Path: 0
+  - responseText: I don't want any trouble, move before anyone sees us talking...
+    completesObjective: 0
+    choice1Text: 
+    choice1Path: 0
+    choice2Text: 
+    choice2Path: 0

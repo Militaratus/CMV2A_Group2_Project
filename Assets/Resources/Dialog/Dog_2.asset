@@ -11,4 +11,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: da95f5eff6d1ab54cb0e89220733a2df, type: 3}
   m_Name: Dog_2
   m_EditorClassIdentifier: 
-  dialogue: []
+  dialogue:
+  - responseText: I hate chickens...those I cannot eat...buffelo wings....but I can
+      settel for a bone...
+    completesObjective: 0
+    choice1Text: 
+    choice1Path: 0
+    choice2Text: 
+    choice2Path: 0

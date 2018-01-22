@@ -11,4 +11,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: da95f5eff6d1ab54cb0e89220733a2df, type: 3}
   m_Name: Dog_3
   m_EditorClassIdentifier: 
-  dialogue: []
+  dialogue:
+  - responseText: Hey Fish....
+    completesObjective: 0
+    choice1Text: You seem friendly, What's what around here?
+    choice1Path: 1
+    choice2Text: 
+    choice2Path: 0
+  - responseText: Well, I'm trying a new method to connect with prisoners on a personal
+      level, they seem more complient that way...
+    completesObjective: 0
+    choice1Text: How come?
+    choice1Path: 2
+    choice2Text: 
+    choice2Path: 0
+  - responseText: Around a month ago, chickens started a riot, becuase of the food
+      quality, they called it a coup, it's funny since now they're locked in the coop.
+    completesObjective: 0
+    choice1Text: 
+    choice1Path: 0
+    choice2Text: 
+    choice2Path: 0

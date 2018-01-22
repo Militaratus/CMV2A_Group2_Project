@@ -11,4 +11,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: da95f5eff6d1ab54cb0e89220733a2df, type: 3}
   m_Name: Chicken_3
   m_EditorClassIdentifier: 
-  dialogue: []
+  dialogue:
+  - responseText: You know Fish, I always wanted to fly since I was a chick...but
+      these wings man...they are useless...you can kinda glide but nothing more...
+    completesObjective: 0
+    choice1Text: 
+    choice1Path: 0
+    choice2Text: 
+    choice2Path: 0

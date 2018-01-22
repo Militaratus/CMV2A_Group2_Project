@@ -9,6 +9,47 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: da95f5eff6d1ab54cb0e89220733a2df, type: 3}
-  m_Name: New Dialog
+  m_Name: Chicken_2
   m_EditorClassIdentifier: 
-  dialogue: []
+  dialogue:
+  - responseText: Hey Fish, come closer ....
+    completesObjective: 0
+    choice1Text: What's going on here?
+    choice1Path: 1
+    choice2Text: Who are you?
+    choice2Path: 2
+  - responseText: So, here's a crash course on your situation. You're in a prison!
+      The new FISH in the sea...
+    completesObjective: 0
+    choice1Text: Prison?
+    choice1Path: 4
+    choice2Text: Escape...
+    choice2Path: 5
+  - responseText: I'm Rougu uno ...
+    completesObjective: 0
+    choice1Text: Get real...
+    choice1Path: 3
+    choice2Text: OK...What's going on here?
+    choice2Path: 1
+  - responseText: Dude...be cool...having a cool name was always my dream...can you
+      just...
+    completesObjective: 0
+    choice1Text: OK...What's going on here?
+    choice1Path: 1
+    choice2Text: 
+    choice2Path: 0
+  - responseText: Well, it's actually a farm....but get real.... but it might as well
+      be a prison, with the fence and the guards and everything...
+    completesObjective: 0
+    choice1Text: OK, How can I get out?
+    choice1Path: 5
+    choice2Text: 
+    choice2Path: 0
+  - responseText: There are rumers of prisoners escaping, you should search around
+      and if you're lucky, you might find some of their stuff that gives you a clue
+      what to do....
+    completesObjective: 1
+    choice1Text: 
+    choice1Path: 0
+    choice2Text: 
+    choice2Path: 0
