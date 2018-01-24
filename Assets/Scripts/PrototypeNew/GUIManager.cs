@@ -16,6 +16,8 @@ public class GUIManager : MonoBehaviour
     public Image[] inventorySlots;
     public Text textInteract;
 
+    public GameObject panelWinner;
+
 	// Use this for initialization
 	void Awake ()
     {
@@ -141,6 +143,14 @@ public class GUIManager : MonoBehaviour
         for (int i = 2; i < inventorySlots.Length; i++)
         {
             inventorySlots[i].color = Color.gray;
+        }
+    }
+
+    public void ShowWin()
+    {
+        if (panelWinner)
+        {
+            panelWinner.SetActive(true);
         }
     }
 }

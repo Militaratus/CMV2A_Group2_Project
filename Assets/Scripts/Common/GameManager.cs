@@ -207,7 +207,10 @@ public class GameManager : MonoBehaviour
         {
             if (activeEscapePlan.objectives[i].taskType != Objective.Type.None)
             {
-                tasks[i] = Task.Incomplete;
+                if (tasks[i] != Task.Complete)
+                {
+                    tasks[i] = Task.Incomplete;
+                }
             }
             else
             {

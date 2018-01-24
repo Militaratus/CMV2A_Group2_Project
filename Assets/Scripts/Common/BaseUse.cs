@@ -6,10 +6,12 @@ public class BaseUse : MonoBehaviour
 {
     GameManager managerGame;
 
-    public enum ObjectDirection { Up, Down, Left, Right }
+    public enum ObjectDirection { Up, Down, Left, Right, Forward, Backwards }
 
     public Transform myObject;
     public ObjectDirection objectDirection;
+
+    bool used = false;
 
     // Use this for initialization
     private void Awake()
@@ -35,6 +37,11 @@ public class BaseUse : MonoBehaviour
     // Use this for initialization
     public void Use ()
     {
+        if (used)
+        {
+            return;
+        }
+
         managerGame.CompleteTask(Objective.Type.Use, gameObject.name);
 
 		switch (objectDirection)
@@ -47,8 +54,15 @@ public class BaseUse : MonoBehaviour
                 myObject.transform.position += Vector3.right * 10; break;
             case ObjectDirection.Up:
                 myObject.transform.position += Vector3.up * 10; break;
+            case ObjectDirection.Forward:
+                myObject.transform.position += Vector3.forward * 2; break;
+            case ObjectDirection.Backwards:
+                myObject.transform.position += Vector3.back * 2; break;
             default:
                 Debug.Log("ERROR: YOU DONE FUBAR'D UP!"); break;
         }
-	}
+
+        used = true;
+
+    }
 }
