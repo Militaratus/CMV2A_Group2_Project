@@ -9,6 +9,6 @@ public class SplashManager : MonoBehaviour
 	// Use this for initialization
 	void Start ()
     {
-        SceneManager.LoadSceneAsync("MainMenu");
+        SceneManager.LoadSceneAsync(1);
     }
 }

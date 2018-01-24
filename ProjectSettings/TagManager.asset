@@ -5,6 +5,11 @@ TagManager:
   serializedVersion: 2
   tags:
   - Use
+  - Barbwire
+  - Enemy
+  - Item
+  - Character
+  - Door
   layers:
   - Default
   - TransparentFX
@@ -14,8 +19,8 @@ TagManager:
   - UI
   - 
   - 
-  - 
-  - 
+  - Background
+  - Minimap
   - 
   - 
   - 

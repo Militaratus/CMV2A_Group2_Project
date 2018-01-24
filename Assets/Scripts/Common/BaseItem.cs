@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class BaseItem : MonoBehaviour
 {
-    GameManager managerGame;
+    internal GameManager managerGame;
 
     // Use this for initialization
     private void Awake()
@@ -36,7 +36,7 @@ public class BaseItem : MonoBehaviour
         newMinimapIcon.transform.parent = transform;
     }
 
-    public void Collect()
+    public virtual void Collect()
     {
         if (managerGame.Collect(gameObject.name))
         {

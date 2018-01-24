@@ -31,7 +31,7 @@ public class BaseDoor : MonoBehaviour
         gameObject.tag = "Door";
     }
 
-    public void Open(GameObject possibleKey)
+    public void Open()
     {
         if (!key)
         {
@@ -39,12 +39,7 @@ public class BaseDoor : MonoBehaviour
             return;
         }
 
-        if (!possibleKey)
-        {
-            return;
-        }
-
-        if (key.name == possibleKey.name)
+        if (managerGame.CheckKey(key.name))
         {
             managerGame.LoadLevel(levelName);
         }

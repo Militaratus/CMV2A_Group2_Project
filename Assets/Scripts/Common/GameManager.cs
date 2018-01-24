@@ -9,6 +9,7 @@ public class GameManager : MonoBehaviour
     public enum GameMode { LifeWithoutParole, DeathRow };
     internal GameMode setGameMode;
     public EscapePlan activeEscapePlan;
+    public string[] keyInventory = new string[0];
     public GameObject[] inventory = new GameObject[2];
     public string[] lastInventory;
 
@@ -50,6 +51,43 @@ public class GameManager : MonoBehaviour
                 Collect(lastInventory[i]);
             }
         }
+    }
+
+    public void AddKey(string name)
+    {
+        string[] oldKeyInventory = new string[0];
+        if (keyInventory.Length > 0)
+        {
+            oldKeyInventory = keyInventory;
+        }
+        
+        keyInventory = new string[keyInventory.Length + 1];
+
+        if (oldKeyInventory.Length > 0)
+        {
+            for (int i = 0; i < oldKeyInventory.Length; i++)
+            {
+                keyInventory[i] = oldKeyInventory[i];
+            }
+        }
+
+        int lastID = keyInventory.Length - 1;
+        keyInventory[lastID] = name;
+    }
+
+    public bool CheckKey(string name)
+    {
+        bool canOpen = false;
+
+        for (int i = 0; i < keyInventory.Length; i++)
+        {
+            if (name == keyInventory[i])
+            {
+                canOpen = true;
+            }
+        }
+
+        return canOpen;
     }
     
     public bool Collect(string name)
@@ -94,12 +132,6 @@ public class GameManager : MonoBehaviour
             // Add it to the inventory
             inventory[openSlot] = newItem;
             managerGui.ShowInventory(openSlot, name);
-            
-            // Expand Inventory if the item is a Backpack
-            if (newItem.GetComponent<Backpack>())
-            {
-                ExpandInventory();
-            }
 
             // Complete Objective if this was a target
             CompleteTask(Objective.Type.Collect, newItem.name);
@@ -158,7 +190,7 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    void ExpandInventory()
+    public void ExpandInventory()
     {
         GameObject[] oldInventory = inventory;
         inventory = new GameObject[6];

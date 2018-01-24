@@ -4,5 +4,9 @@ using UnityEngine;
 
 public class Backpack : BaseItem
 {
-    
+    public override void Collect()
+    {
+        managerGame.ExpandInventory();
+        gameObject.SetActive(false);
+    }
 }

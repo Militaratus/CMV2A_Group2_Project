@@ -7,7 +7,7 @@ public class BaseBribe : MonoBehaviour
     public GameObject[] enemies;
 
 	// Use this for initialization
-	void Start ()
+	void Awake ()
     {
         enemies = GameObject.FindGameObjectsWithTag("Enemy");
     }
@@ -19,8 +19,23 @@ public class BaseBribe : MonoBehaviour
         {
             if (Vector3.Distance(transform.position, enemies[i].transform.position) < 20.0f)
             {
-                enemies[i].GetComponent<BaseEnemy>().Lure(gameObject);
+                Lure(i);
             }
         }
 	}
+
+    public virtual void Lure(int enemyID)
+    {
+        if (!enemies[enemyID])
+        {
+            return;
+        }
+
+        if (!enemies[enemyID].GetComponent<BaseEnemy>())
+        {
+            return;
+        }
+
+        enemies[enemyID].GetComponent<BaseEnemy>().Lure(gameObject);
+    }
 }

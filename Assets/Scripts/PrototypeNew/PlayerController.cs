@@ -82,7 +82,7 @@ public class PlayerController : MonoBehaviour
                 case "Item":
                     hit.transform.GetComponent<BaseItem>().Collect(); break;
                 case "Door":
-                    hit.transform.GetComponent<BaseDoor>().Open(activeInventoryItem); break;
+                    hit.transform.GetComponent<BaseDoor>().Open(); break;
                 case "Use":
                     hit.transform.GetComponent<BaseUse>().Use(); break;
                 default:
@@ -185,18 +185,25 @@ public class PlayerController : MonoBehaviour
 
         if (Physics.Raycast(myCamera.position, fwd, out hit) && !Blocked())
         {
-            switch(hit.transform.tag)
+            if (hit.distance < 10.0f)
             {
-                case "Character":
-                    managerGUI.ShowInteractIconTalk(); break;
-                case "Item":
-                    managerGUI.ShowInteractIconCollect(); break;
-                case "Door":
-                    CheckLock(); break;
-                case "Use":
-                    managerGUI.ShowInteractIconUse(); break;
-                default:
-                    managerGUI.HideInteractionIcon(); break;
+                switch (hit.transform.tag)
+                {
+                    case "Character":
+                        managerGUI.ShowInteractIconTalk(); break;
+                    case "Item":
+                        managerGUI.ShowInteractIconCollect(); break;
+                    case "Door":
+                        CheckLock(); break;
+                    case "Use":
+                        managerGUI.ShowInteractIconUse(); break;
+                    default:
+                        managerGUI.HideInteractionIcon(); break;
+                }
+            }
+            else
+            {
+                managerGUI.HideInteractionIcon();
             }
         }
         else
@@ -214,15 +221,8 @@ public class PlayerController : MonoBehaviour
             return;
         }
 
-        // Do I even have an item equipped?
-        if (!activeInventoryItem)
-        {
-            managerGUI.ShowInteractIconLocked();
-            return;
-        }
-
-        // Does the item match?
-        if (activeInventoryItem.name == hit.transform.GetComponent<BaseDoor>().key.name)
+        // Do I have the key?
+        if (managerGame.CheckKey(hit.transform.GetComponent<BaseDoor>().key.name))
         {
             managerGUI.ShowInteractIconOpen();
         }

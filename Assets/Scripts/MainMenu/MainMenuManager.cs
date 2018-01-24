@@ -10,6 +10,7 @@ public class MainMenuManager : MonoBehaviour
     private GameManager managerGame;
 
     // Public
+    public Animator menuAnimation;
     public GameObject panelMainMenu;
     public GameObject panelPlayModes;
     public GameObject panelControls;
@@ -65,6 +66,9 @@ public class MainMenuManager : MonoBehaviour
     public void ActivateMainMenu()
     {
         ActivatePanel(MenuPanel.MainMenu);
+        menuAnimation.SetFloat("ToPig", 0);
+        menuAnimation.SetFloat("ToCow", 0);
+        menuAnimation.SetFloat("ToFarm", 0);
     }
 
     public void ActivatePlayMode(bool loadGame)
@@ -72,6 +76,9 @@ public class MainMenuManager : MonoBehaviour
         confirmLoad = loadGame;
 
         ActivatePanel(MenuPanel.PlayMode);
+        menuAnimation.SetFloat("ToPig", 1);
+        menuAnimation.SetFloat("ToCow", 0);
+        menuAnimation.SetFloat("ToFarm", 0);
     }
 
     public void ChoosePlayMode(int playMode)
@@ -108,15 +115,25 @@ public class MainMenuManager : MonoBehaviour
     public void ActivateControls()
     {
         ActivatePanel(MenuPanel.Controls);
+        menuAnimation.SetFloat("ToPig", 1);
+        menuAnimation.SetFloat("ToCow", 1);
+        menuAnimation.SetFloat("ToFarm", 0);
     }
 
     public void ActivateCredits()
     {
         ActivatePanel(MenuPanel.Credits);
+        menuAnimation.SetFloat("ToPig", 1);
+        menuAnimation.SetFloat("ToCow", 1);
+        menuAnimation.SetFloat("ToFarm", 1);
     }
 
     public void PlayGame()
     {
-        managerGame.LoadLevel("PrototypeNew");
+
+        menuAnimation.SetFloat("ToPig", 1);
+        menuAnimation.SetFloat("ToCow", 1);
+        menuAnimation.SetFloat("ToFarm", 1);
+        managerGame.LoadLevel("FarmFinal");
     }
 }
