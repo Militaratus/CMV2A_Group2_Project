@@ -2,10 +2,15 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// Written by Jared Nealon
+/// Copyright 2018 - Group 2 of class CMV2A
+/// </summary>
 public class BaseLadder : MonoBehaviour
 {
     GameObject player;
 
+    // Push the player up if they are inside the Trigger zone and pushing up
     private void Update()
     {
         if (player != null)
@@ -16,7 +21,8 @@ public class BaseLadder : MonoBehaviour
             }
         }
     }
-
+    
+    // Check if the player has entered the Trigger zone
     private void OnTriggerEnter(Collider other)
     {
         if (other.tag == "Player")
@@ -25,6 +31,7 @@ public class BaseLadder : MonoBehaviour
         }
     }
 
+    // Check if the player has left the Trigger zone
     private void OnTriggerExit(Collider other)
     {
         if (other.tag == "Player")

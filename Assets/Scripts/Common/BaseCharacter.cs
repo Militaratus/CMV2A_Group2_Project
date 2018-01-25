@@ -2,11 +2,17 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// Written by Jared Nealon
+/// Copyright 2018 - Group 2 of class CMV2A
+/// </summary>
 public class BaseCharacter : MonoBehaviour
 {
+    // Managers tracker
     GameManager managerGame;
     DialogManager managerDialog;
 
+    // Internal variables
     public Dialog myDialog;
 
     // Use this for initialization
@@ -33,6 +39,7 @@ public class BaseCharacter : MonoBehaviour
         managerDialog = GameObject.Find("System/LevelManager").GetComponent<DialogManager>();
     }
 
+    // Instantiate a minimap icon from the Resources folder
     void SpawnMinimapIcon()
     {
         GameObject newMinimapIconPrefab = Resources.Load("Common/CharacterMinimapIcon") as GameObject;
@@ -41,6 +48,7 @@ public class BaseCharacter : MonoBehaviour
         newMinimapIcon.transform.parent = transform;
     }
 
+    // Ask the dialog manager to enable the dialog system
     public void Talk()
     {
         managerDialog.StartTalking(myDialog, gameObject.name);

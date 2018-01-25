@@ -4,16 +4,22 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
+/// <summary>
+/// Written by Jared Nealon
+/// Copyright 2018 - Group 2 of class CMV2A
+/// </summary>
 public class LoadingManager : MonoBehaviour
 {
     // Managers
     GameManager managerGame;
     EscapePlan myPlan;
 
+    // Internal
     public Image exampleImage;
     public Text exampleTitle;
     public Text exampleDescription;
 
+    // Use this for initialization
     private void Awake()
     {
 #if UNITY_EDITOR
@@ -36,18 +42,20 @@ public class LoadingManager : MonoBehaviour
         LoadExampleText();
     }
 
-    // Use this for initialization
+    // Use this for second initialization
     void Start ()
     {
         StartCoroutine(LoadNewScene());
     }
 
+    // Grab the escape plan text
     void LoadExampleText()
     {
         exampleTitle.text = myPlan.title;
         exampleDescription.text = myPlan.description.Replace("NEWLINE", "\n");
     }
 
+    // Loading Async from Unity Script Reference/Manual, slightly adapted for this project
     IEnumerator LoadNewScene()
     {
         // This line waits for 3 seconds before executing the next line in the coroutine.

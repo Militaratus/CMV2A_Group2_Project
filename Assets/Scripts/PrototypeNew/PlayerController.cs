@@ -2,6 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// Written by Jared Nealon
+/// Copyright 2018 - Group 2 of class CMV2A
+/// </summary>
 public class PlayerController : MonoBehaviour
 {
     GUIManager.MenuPanel openMenu = GUIManager.MenuPanel.HUD;
@@ -10,11 +14,11 @@ public class PlayerController : MonoBehaviour
     public GUIManager managerGUI;
     public GameObject activeInventoryItem;
 
-
-
-    UnityStandardAssets.Characters.FirstPerson.FirstPersonController saFPC;
     Transform myCamera;
     RaycastHit hit;
+
+    // Unity Standard Assets reference of the First Person Controller, which I slightly changed the variable accessability
+    UnityStandardAssets.Characters.FirstPerson.FirstPersonController saFPC;
 
     // Use this for initialization
     void Awake ()
@@ -47,6 +51,7 @@ public class PlayerController : MonoBehaviour
         GrabInventory();
     }
 
+    // Grab Inventory from previous load
     void GrabInventory()
     {
         managerGame.GiveInventory();
@@ -60,6 +65,7 @@ public class PlayerController : MonoBehaviour
 
     }
 
+    // Input Manager on top of the Standard Assets FPC
     void ExtraInput()
     {
         if (Input.GetButton("Crouch"))
@@ -122,7 +128,6 @@ public class PlayerController : MonoBehaviour
 
         if (Input.GetButtonUp("ShowEscapePlan"))
         {
-            Debug.Log("Fucking LOL");
             if(openMenu != GUIManager.MenuPanel.EscapePlan)
             {
                 OpenMenu(GUIManager.MenuPanel.EscapePlan);
@@ -132,22 +137,9 @@ public class PlayerController : MonoBehaviour
                 CloseMenu();
             }
         }
-
-        if (Input.GetButtonUp("ShowPauseMenu"))
-        {
-            /*
-            if (openMenu != GUIManager.MenuPanel.EscapePlan)
-            {
-                OpenMenu(GUIManager.MenuPanel.EscapePlan);
-            }
-            else
-            {
-                CloseMenu();
-            }
-            */
-        }
     }
 
+    // Name based on a popular meme, disables gravity and lightens the load
     void FuckGravity()
     {
         if (activeInventoryItem == null)
@@ -179,6 +171,7 @@ public class PlayerController : MonoBehaviour
         managerGUI.ActivatePanel(openMenu);
     }
 
+    // Raycast is heavy on the game, using FixedUpdate to limit the amount it is called/generated
     private void FixedUpdate()
     {
         Vector3 fwd = myCamera.TransformDirection(Vector3.forward);
@@ -232,6 +225,7 @@ public class PlayerController : MonoBehaviour
         }
     }
 
+    // Disable Raycast if the HUD is not active
     bool Blocked()
     {
         bool amBlocked = false;

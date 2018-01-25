@@ -3,6 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
+/// <summary>
+/// Written by Jared Nealon
+/// Copyright 2018 - Group 2 of class CMV2A
+/// </summary>
 public class GameManager : MonoBehaviour
 {
     public enum Task { None, Incomplete, Complete };
@@ -31,17 +35,7 @@ public class GameManager : MonoBehaviour
         DontDestroyOnLoad(gameObject);
     }
     
-    void LoadEscapePlan()
-    {
-        if (!activeEscapePlan)
-        {
-            Debug.Log("ERROR: No Escape Plan Loaded!");
-            return;
-        }
-
-
-    }
-
+    // Reload Inventory on Scene Switch
     public void GiveInventory()
     {
         for (int i = 0; i < lastInventory.Length; i++)
@@ -53,6 +47,7 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    // Add a key to the key inventory
     public void AddKey(string name)
     {
         string[] oldKeyInventory = new string[0];
@@ -75,6 +70,7 @@ public class GameManager : MonoBehaviour
         keyInventory[lastID] = name;
     }
 
+    // Check if we have the specified key, and return true if we do.
     public bool CheckKey(string name)
     {
         bool canOpen = false;
@@ -90,10 +86,12 @@ public class GameManager : MonoBehaviour
         return canOpen;
     }
     
+    // The function to have the object to be added to our inventory if we can, returns false if we have no space
     public bool Collect(string name)
     {
         bool collected = false;
 
+        // We require the player to be in the scene
         if (!player)
         {
             player = GameObject.FindGameObjectWithTag("Player").transform;
@@ -105,6 +103,7 @@ public class GameManager : MonoBehaviour
             }
         }
 
+        // We require the GUI Manager to update the HUD
         if(!managerGui)
         {
             managerGui = GameObject.Find("System/LevelManager").GetComponent<GUIManager>();
@@ -116,6 +115,7 @@ public class GameManager : MonoBehaviour
             }
         }
 
+        // Do we have a space to spare?
         int openSlot = FindEmptySlot();
         if (openSlot != -1)
         {
@@ -142,6 +142,7 @@ public class GameManager : MonoBehaviour
         return collected;
     }
 
+    // Scan the inventory array if there is an unassigned spot
     int FindEmptySlot()
     {
         int emptySlot = -1;
@@ -158,6 +159,7 @@ public class GameManager : MonoBehaviour
         return emptySlot;
     }
 
+    // Retrieve an item from a specific slot
     public GameObject GetInventory(int slot)
     {
         if ((inventory.Length - 1)  < slot)
@@ -169,14 +171,9 @@ public class GameManager : MonoBehaviour
         return inventory[slot];
     }
 
+    // Remove the item from the inventory array
     public void DropInventory(GameObject myItem)
     {
-        // Can't drop backpack, so FU!
-        if (myItem.GetComponent<Backpack>())
-        {
-            return;
-        }
-
         for (int i = 0; i < inventory.Length; i++)
         {
             if (inventory[i] == myItem)
@@ -190,6 +187,7 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    // Expand the inventory array from 2 to 6
     public void ExpandInventory()
     {
         GameObject[] oldInventory = inventory;
@@ -201,6 +199,7 @@ public class GameManager : MonoBehaviour
         managerGui.ExpandInventory();
     }
 
+    // Fill in the the task tracker array
     public void LoadTasks()
     {
         for (int i = 0; i < activeEscapePlan.objectives.Length; i++)
@@ -219,8 +218,10 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    // Toggles a task to complete if it exists within the current escape plan
     public void CompleteTask(Objective.Type type, string target)
     {
+        // We need the Escape Plan Manager for this
         if (!managerEscapePlan)
         {
             managerEscapePlan = GameObject.Find("System/LevelManager").GetComponent<EscapePlanManager>();
@@ -232,6 +233,7 @@ public class GameManager : MonoBehaviour
             }
         }
 
+        // See if the parameters match one in the active escape plan, set it to complete if it's a match
         for (int i = 0; i < activeEscapePlan.objectives.Length; i++)
         {
             if (activeEscapePlan.objectives[i].taskType == type && activeEscapePlan.objectives[i].taskTarget == target)
@@ -242,8 +244,10 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    // Prepares the game for the loading screen to handle the scene it has to load
     public void LoadLevel(string nextLevel)
     {
+        // Save the inventory to respawn upon gameplay scene load
         lastInventory = new string[inventory.Length];
         for (int i = 0; i < inventory.Length; i++)
         {

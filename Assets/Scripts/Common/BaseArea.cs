@@ -2,11 +2,16 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// Written by Jared Nealon
+/// Copyright 2018 - Group 2 of class CMV2A
+/// </summary>
 public class BaseArea : MonoBehaviour
 {
     public string areaName = "";
     GameManager managerGame;
 
+    // Use this for initialization
     private void Awake()
     {
 #if UNITY_EDITOR
@@ -26,6 +31,7 @@ public class BaseArea : MonoBehaviour
 #endif
     }
 
+    // Send a task completion event to the GameManager if the player entered the Trigger zone
     private void OnTriggerEnter(Collider other)
     {
         if (other.tag == "Player")

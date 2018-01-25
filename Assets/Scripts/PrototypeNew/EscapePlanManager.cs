@@ -3,6 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+/// <summary>
+/// Written by Jared Nealon
+/// Copyright 2018 - Group 2 of class CMV2A
+/// </summary>
 public class EscapePlanManager : MonoBehaviour
 {
     // Manager References
@@ -18,6 +22,7 @@ public class EscapePlanManager : MonoBehaviour
     public Toggle[] TaskToggle;
     public Text[] TaskLabel;
 
+    // Use this for initialization
     private void Awake()
     {
 #if UNITY_EDITOR
@@ -40,6 +45,7 @@ public class EscapePlanManager : MonoBehaviour
         FillPanel();
     }
 
+    // Update the UI elements with the Escape Plan data
     void FillPanel()
     {
         textTitle.text = myPlan.title;
@@ -64,6 +70,7 @@ public class EscapePlanManager : MonoBehaviour
         }
     }
 
+    // Autofill the task text depending on task type and target name
     void FillLabel(int slot)
     {
         string taskString = "";
@@ -80,6 +87,7 @@ public class EscapePlanManager : MonoBehaviour
         TaskLabel[slot].text = taskString;
     }
 
+    // Toggle the Task Checkbox to be checked
     public void UpdatePanel(int slot)
     {
         TaskToggle[slot].isOn = true;

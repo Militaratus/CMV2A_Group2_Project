@@ -2,6 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// Written by Jared Nealon
+/// Copyright 2018 - Group 2 of class CMV2A
+/// </summary>
 public class MainMenuManager : MonoBehaviour
 {
     // Private
@@ -36,11 +40,14 @@ public class MainMenuManager : MonoBehaviour
 #endif
     }
 
+    // Use this for second initialization
     void Start ()
     {
         ActivatePanel(MenuPanel.MainMenu);
     }
 
+
+    // Handle panel switching
     void ActivatePanel(MenuPanel panel)
     {
         panelMainMenu.SetActive(false);

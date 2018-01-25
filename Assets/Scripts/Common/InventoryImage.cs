@@ -6,9 +6,13 @@ using UnityEditor;
 using UnityEngine;
 using UnityEngine.UI;
 
+/// <summary>
+/// Written by Jared Nealon
+/// Copyright 2018 - Group 2 of class CMV2A
+/// </summary>
 public class InventoryImage : MonoBehaviour
 {
-	// Use this for initialization
+	// Use the Editor to spawn an image, on Release use default white.
 	public void ShowImage (string name)
     {
 #if UNITY_EDITOR
@@ -20,6 +24,7 @@ public class InventoryImage : MonoBehaviour
 
     }
 
+    // Hide the image (color)
     public void HideImage()
     {
         GetComponent<RawImage>().color = Color.clear;

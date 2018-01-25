@@ -3,6 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+/// <summary>
+/// Written by Jared Nealon
+/// Copyright 2018 - Group 2 of class CMV2A
+/// </summary>
 public class GUIManager : MonoBehaviour
 {
     public enum MenuPanel { Dialog, EscapePlan, HUD };
@@ -26,6 +30,7 @@ public class GUIManager : MonoBehaviour
 
     }
 
+    // Handle the panel switching
     public void ActivatePanel(MenuPanel panel)
     {
         panelDialog.SetActive(false);
@@ -45,12 +50,6 @@ public class GUIManager : MonoBehaviour
         }
         activePanel = panel;
     }
-
-    // Update is called once per frame
-    void Update ()
-    {
-		
-	}
 
     public void ShowInteractIconTalk()
     {
@@ -114,6 +113,7 @@ public class GUIManager : MonoBehaviour
         textInteract.text = "";
     }
 
+    // A check if the hud is currently being shown
     bool ShowHUD()
     {
         bool showHUD = true;

@@ -2,6 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// Written by Jared Nealon
+/// Copyright 2018 - Group 2 of class CMV2A
+/// </summary>
 public class BaseBribe : MonoBehaviour
 {
     public GameObject[] enemies;
@@ -12,7 +16,7 @@ public class BaseBribe : MonoBehaviour
         enemies = GameObject.FindGameObjectsWithTag("Enemy");
     }
 	
-	// Update is called once per frame
+	// Check if the enemy is in range of the lure
 	void Update ()
     {
         for (int i = 0; i < enemies.Length; i++)
@@ -24,6 +28,7 @@ public class BaseBribe : MonoBehaviour
         }
 	}
 
+    // Send the lure request to the enemy
     public virtual void Lure(int enemyID)
     {
         if (!enemies[enemyID])

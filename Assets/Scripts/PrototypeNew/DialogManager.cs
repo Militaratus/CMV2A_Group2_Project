@@ -3,6 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+/// <summary>
+/// Written by Jared Nealon
+/// Copyright 2018 - Group 2 of class CMV2A
+/// </summary>
 public class DialogManager : MonoBehaviour
 {
     // Manager References
@@ -22,6 +26,7 @@ public class DialogManager : MonoBehaviour
     int choice1Path = 0;
     int choice2Path = 0;
 
+    // Use this for initialization
     private void Awake()
     {
 #if UNITY_EDITOR
@@ -42,7 +47,7 @@ public class DialogManager : MonoBehaviour
         managerGUI = GameObject.Find("System/LevelManager").GetComponent<GUIManager>();
     }
 
-    // Use this for initialization
+    // Activate the Dialog system
     public void StartTalking (Dialog newDialog, string name)
     {
         activeDialog = newDialog;
@@ -52,6 +57,7 @@ public class DialogManager : MonoBehaviour
         managerGUI.ActivatePanel(GUIManager.MenuPanel.Dialog);
     }
 	
+    // Update the UI elements with the new data
 	void UpdateDialog ()
     {
         Dialogue curDialog = activeDialog.dialogue[currentChoice];

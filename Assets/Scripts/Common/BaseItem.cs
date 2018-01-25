@@ -2,6 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// Written by Jared Nealon
+/// Copyright 2018 - Group 2 of class CMV2A
+/// </summary>
 public class BaseItem : MonoBehaviour
 {
     internal GameManager managerGame;
@@ -28,6 +32,7 @@ public class BaseItem : MonoBehaviour
         SpawnMinimapIcon();
     }
 
+    // Instantiate a minimap icon from the Resources folder
     void SpawnMinimapIcon()
     {
         GameObject newMinimapIconPrefab = Resources.Load("Common/ItemMinimapIcon") as GameObject;
@@ -36,6 +41,7 @@ public class BaseItem : MonoBehaviour
         newMinimapIcon.transform.parent = transform;
     }
 
+    // Ask GameManager to add this item to the inventory, and destroy this if successfull
     public virtual void Collect()
     {
         if (managerGame.Collect(gameObject.name))

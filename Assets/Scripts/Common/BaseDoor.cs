@@ -2,15 +2,20 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// Written by Jared Nealon
+/// Copyright 2018 - Group 2 of class CMV2A
+/// </summary>
 public class BaseDoor : MonoBehaviour
 {
     // Managers
     GameManager managerGame;
 
-
+    // Required variables
     public GameObject key;
     public string levelName;
 
+    // Use this for initialization
     private void Awake()
     {
 #if UNITY_EDITOR
@@ -31,6 +36,7 @@ public class BaseDoor : MonoBehaviour
         gameObject.tag = "Door";
     }
 
+    // Open the door if it's possible, which secretly calls to GameManager to handle the loading.
     public void Open()
     {
         if (!key)

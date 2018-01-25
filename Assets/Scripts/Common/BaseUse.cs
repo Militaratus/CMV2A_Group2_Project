@@ -2,15 +2,16 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// Written by Jared Nealon
+/// Copyright 2018 - Group 2 of class CMV2A
+/// </summary>
 public class BaseUse : MonoBehaviour
 {
     GameManager managerGame;
-
     public enum ObjectDirection { Up, Down, Left, Right, Forward, Backwards }
-
     public Transform myObject;
     public ObjectDirection objectDirection;
-
     bool used = false;
 
     // Use this for initialization
@@ -34,14 +35,16 @@ public class BaseUse : MonoBehaviour
         gameObject.tag = "Use";
     }
 
-    // Use this for initialization
+    // Once this is called, the assigned GameObject will be manipulated into the set direction.
     public void Use ()
     {
+        // Have I been triggered already?
         if (used)
         {
             return;
         }
 
+        // Send the task completion command just in case this is one.
         managerGame.CompleteTask(Objective.Type.Use, gameObject.name);
 
 		switch (objectDirection)

@@ -2,6 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// Written by Jared Nealon
+/// Copyright 2018 - Group 2 of class CMV2A
+/// </summary>
 public class BaseEnemy : MonoBehaviour
 {
     GameManager managerGame;
@@ -36,6 +40,7 @@ public class BaseEnemy : MonoBehaviour
         myRigidbody = GetComponent<Rigidbody>();
     }
 
+    // Instantiate a minimap icon from the Resources folder
     void SpawnMinimapIcon()
     {
         GameObject newMinimapIconPrefab = Resources.Load("Common/EnemyMinimapIcon") as GameObject;
@@ -44,6 +49,7 @@ public class BaseEnemy : MonoBehaviour
         newMinimapIcon.transform.parent = transform;
     }
 
+    // Look at the player unless they are lured, and move towards the lure
     private void Update()
     {
         if (!lured)
@@ -52,9 +58,10 @@ public class BaseEnemy : MonoBehaviour
         }
         else
         {
+            // If the lure object still exist, head to the lure
             if (lureObject)
             {
-                if (Vector3.Distance(transform.position, lureObject.transform.position) > 5.0f)
+                if (Vector3.Distance(transform.position, lureObject.transform.position) > 2.0f)
                 {
                     transform.LookAt(lureObject.transform.position);
                     myRigidbody.velocity = transform.forward * 2.0f; ;
@@ -67,6 +74,7 @@ public class BaseEnemy : MonoBehaviour
         }
     }
 
+    // Enable this enemy to be lured
     public void Lure(GameObject location)
     {
         lureObject = location;
